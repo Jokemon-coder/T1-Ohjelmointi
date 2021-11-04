@@ -1,0 +1,14 @@
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Harjoituksia1\Harjoituksia1\bin\Debug\netcoreapp3.1\Harjoituksia1.exe
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Harjoituksia1\Harjoituksia1\bin\Debug\netcoreapp3.1\Harjoituksia1.deps.json
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Harjoituksia1\Harjoituksia1\bin\Debug\netcoreapp3.1\Harjoituksia1.runtimeconfig.json
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Harjoituksia1\Harjoituksia1\bin\Debug\netcoreapp3.1\Harjoituksia1.runtimeconfig.dev.json
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Harjoituksia1\Harjoituksia1\bin\Debug\netcoreapp3.1\Harjoituksia1.dll
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Harjoituksia1\Harjoituksia1\bin\Debug\netcoreapp3.1\Harjoituksia1.pdb
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Harjoituksia1\Harjoituksia1\obj\Debug\netcoreapp3.1\Harjoituksia1.csproj.AssemblyReference.cache
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Harjoituksia1\Harjoituksia1\obj\Debug\netcoreapp3.1\Harjoituksia1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Harjoituksia1\Harjoituksia1\obj\Debug\netcoreapp3.1\Harjoituksia1.AssemblyInfoInputs.cache
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Harjoituksia1\Harjoituksia1\obj\Debug\netcoreapp3.1\Harjoituksia1.AssemblyInfo.cs
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Harjoituksia1\Harjoituksia1\obj\Debug\netcoreapp3.1\Harjoituksia1.csproj.CoreCompileInputs.cache
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Harjoituksia1\Harjoituksia1\obj\Debug\netcoreapp3.1\Harjoituksia1.dll
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Harjoituksia1\Harjoituksia1\obj\Debug\netcoreapp3.1\Harjoituksia1.pdb
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Harjoituksia1\Harjoituksia1\obj\Debug\netcoreapp3.1\Harjoituksia1.genruntimeconfig.cache
