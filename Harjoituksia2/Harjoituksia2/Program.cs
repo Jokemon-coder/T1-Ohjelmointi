@@ -25,15 +25,15 @@ namespace Harjoituksia2
                 {
                 case "1":
                     Console.Clear();
-                    ohjelma1(0, 0);
+                    ohjelma1(0, 1);
                     break;
                 case "2":
                     Console.Clear();
-                    ohjelma2(0, 0, 0);
+                    ohjelma2(0, 1, 2);
                     break;
                 case "3":
                     Console.Clear();
-
+                    ohjelma3();
                     break;
                 case "4":
                     Console.Clear();
@@ -136,6 +136,57 @@ namespace Harjoituksia2
             Console.ReadLine();
             Console.Clear();
 
+        }
+
+        public static void ohjelma3()
+        {
+            ALKU3:
+            Console.Clear();
+            Console.WriteLine("Anna numero 0 ja 9 väliltä, jotta voin muuttaa sen sanaksi");
+            
+            string nimi = Console.ReadLine();
+            switch (nimi)
+            {
+
+                case "0":
+                    Console.WriteLine("Nolla");
+                    break;
+                case "1":
+                    Console.WriteLine("Yksi");
+                    break;
+                case "2":
+                    Console.WriteLine("Kaksi");
+                    break;
+                case "3":
+                    Console.WriteLine("Kolme");
+                    break;
+                case "4":
+                    Console.WriteLine("Neljä");
+                    break;
+                case "5":
+                    Console.WriteLine("Viisi");
+                    break;
+                case "6":
+                    Console.WriteLine("Kuusi");
+                    break;
+                case "7":
+                    Console.WriteLine("Seitsemän");
+                    break;
+                case "8":
+                    Console.WriteLine("Kahdeksan");
+                    break;
+                case "9":
+                    Console.WriteLine("Yhdeksän");
+                    break;
+                default:
+                    Console.WriteLine("Annoit väärän luvun, yritä uudelleen painamalla ENTER");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto ALKU3;
+            }
+            Console.WriteLine("Paina ENTER palataksesi valikkoon");
+            Console.ReadLine();
+            Console.Clear();
 
         }
     }
