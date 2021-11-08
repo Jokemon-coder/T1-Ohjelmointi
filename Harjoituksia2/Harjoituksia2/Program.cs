@@ -6,11 +6,11 @@ namespace Harjoituksia2
     {
         static void Main(string[] args)
         {
-            ALKU:
+        ALKU:
 
             Console.WriteLine("Harjoitukset 2");
             Console.WriteLine("--------------");
-            
+
             Console.WriteLine("Valitse syöttämällä kyseisen ohjelman numero:");
             Console.WriteLine("Ohjelma 1");
             Console.WriteLine("Ohjelma 2");
@@ -22,7 +22,7 @@ namespace Harjoituksia2
 
             string ohjelmat = Console.ReadLine();
             switch (ohjelmat)
-                {
+            {
                 case "1":
                     Console.Clear();
                     ohjelma1(0, 1);
@@ -37,7 +37,7 @@ namespace Harjoituksia2
                     break;
                 case "4":
                     Console.Clear();
-
+                    ohjelma4(0, 0, 0, 0, 0);
                     break;
                 case "5":
                     Console.Clear();
@@ -64,26 +64,29 @@ namespace Harjoituksia2
 
         static void ohjelma1(int luku1, int luku2)
         {
-            ALKU1:
+        ALKU1:
             Console.WriteLine("Syötä kaksi kokonaislukua, jotta voin järjestää ne suuruusjärjestykseen:");
             try
             {
                 luku1 = int.Parse(Console.ReadLine());
                 luku2 = int.Parse(Console.ReadLine());
-            } catch
+            }
+            catch
             {
                 Console.WriteLine("Syötä vain kokonaislukuja, kiitos");
                 Console.WriteLine("---------------------------------");
                 goto ALKU1;
             }
-            
+
             if (luku1 > luku2)
             {
                 Console.WriteLine(luku1 + " " + luku2);
-            } else if (luku1 < luku2)
+            }
+            else if (luku1 < luku2)
             {
                 Console.WriteLine(luku2 + " " + luku1);
-            } else
+            }
+            else
             {
                 Console.WriteLine("Luvut ovat yhtä suuria");
             }
@@ -91,59 +94,53 @@ namespace Harjoituksia2
             Console.WriteLine("Paina ENTER palataksesi valikkoon");
             Console.ReadLine();
             Console.Clear();
-            
+
         }
 
         static void ohjelma2(int luku1, int luku2, int luku3)
         {
-            ALKU2:
+        ALKU2:
             Console.WriteLine("Syötä kolme kokonaislukua, jotta voin etsiä niistä suurimman");
+
             try
             {
                 luku1 = int.Parse(Console.ReadLine());
                 luku2 = int.Parse(Console.ReadLine());
                 luku3 = int.Parse(Console.ReadLine());
-            }catch
+            }
+            catch
             {
                 Console.WriteLine("Syötä vain kokonaislukuja, kiitos");
                 Console.WriteLine("---------------------------------");
                 goto ALKU2;
-            } 
-            
-            if (luku1 > luku2)
+            }
+
+            int suurin = luku1;
+            if (luku2 > suurin) suurin = luku2;
+            if (luku3 > suurin) suurin = luku3;
+            if (luku1 == luku2)
             {
-                if (luku1 > luku3)
+                if (luku2 == luku3)
                 {
-                    Console.WriteLine(luku1 + " on suurin");
-                } 
-            } if (luku2 > luku1)
-            {
-                if (luku2 > luku3)
-                {
-                    Console.WriteLine(luku2 + " on suurin");
+                   Console.WriteLine("Luvut ovat samanarvoisia");
                 }
-            } if (luku3 > luku1)
+
+            }
+            else
             {
-                if (luku3 > luku2)
-                {
-                    Console.WriteLine(luku3 + " on suurin");
-                }
-            } else
-            {
-                Console.WriteLine("Luvut ovat yhtä suuria");
+                Console.WriteLine(suurin + " on suurin");
             }
             Console.WriteLine("Paina ENTER palataksesi valikkoon");
             Console.ReadLine();
             Console.Clear();
-
         }
 
         public static void ohjelma3()
         {
-            ALKU3:
+        ALKU3:
             Console.Clear();
             Console.WriteLine("Anna numero 0 ja 9 väliltä, jotta voin muuttaa sen sanaksi");
-            
+
             string nimi = Console.ReadLine();
             switch (nimi)
             {
@@ -189,5 +186,52 @@ namespace Harjoituksia2
             Console.Clear();
 
         }
+        static void ohjelma4(int luku1, int luku2, int luku3, int luku4, int luku5)
+        {
+        ALKU4:
+            Console.WriteLine("Syötä viisi kokonaislukua, jotta voin etsiä niistä suurimman");
+
+            try
+            {
+                luku1 = int.Parse(Console.ReadLine());
+                luku2 = int.Parse(Console.ReadLine());
+                luku3 = int.Parse(Console.ReadLine());
+                luku4 = int.Parse(Console.ReadLine());
+                luku5 = int.Parse(Console.ReadLine());
+            } catch
+            {
+                Console.WriteLine("Syötä vain kokonaislukuja, kiitos");
+                Console.WriteLine("---------------------------------");
+                goto ALKU4;
+            }
+
+            int suurin = luku1;
+            if (luku2 > suurin) suurin = luku2;
+            if (luku3 > suurin) suurin = luku3;
+            if (luku4 > suurin) suurin = luku4;
+            if (luku5 > suurin) suurin = luku5;
+            if (luku1 == luku2)
+            {
+                if (luku2 == luku3)
+                {
+                    if (luku3 == luku4)
+                    {
+                        if (luku4 == luku5)
+                        {
+                            Console.WriteLine("Luvut ovat samanarvoisia");
+                        }
+                    }
+                }
+            } else
+            {
+                Console.WriteLine(suurin + " on suurin");
+            }
+            Console.WriteLine("Paina ENTER palataksesi valikkoon");
+            Console.ReadLine();
+            Console.Clear();
+
+
+        }
     }
-}
+}   
+
