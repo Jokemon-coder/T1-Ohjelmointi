@@ -41,7 +41,7 @@ namespace Harjoituksia2
                     break;
                 case "5":
                     Console.Clear();
-
+                    ohjelma5(0, 0, 0);
                     break;
                 case "6":
                     Console.Clear();
@@ -231,6 +231,58 @@ namespace Harjoituksia2
             Console.Clear();
 
 
+        }
+
+        static void ohjelma5(int kokonaisLuku, double doubleLuku, int merkkiJono)
+        {
+
+            merkkiJono.ToString();
+
+        ALKU5:
+            Console.WriteLine("Valitse syötettävä arvo:");
+            Console.WriteLine("Paina 1, jos haluat syöttää kokonaisluvun");
+            Console.WriteLine("Paina 2, jos haluat syöttää double-luvun");
+            Console.WriteLine("Paina 3, jos haluat syöttää merkkijonon");
+
+            string luvut = Console.ReadLine();
+            switch (luvut)
+            {
+                case "1":
+                    Console.WriteLine("Syötä kokonaisluku:");
+                    try
+                    {
+                        kokonaisLuku = int.Parse(Console.ReadLine());
+                    }catch
+                    {
+                        Console.WriteLine("Syötä vain kokonaislukuja, kiitos");
+                        Console.WriteLine("---------------------------------");
+                        goto ALKU5;
+                    }
+                    Console.Clear();
+                    int resultKoko = kokonaisLuku + 1;
+                    Console.WriteLine("Kasvatin antamaasi lukua yhdellä. Se on nyt " + resultKoko + ".");
+                    break;
+                case "2":
+                    Console.WriteLine("Syötä double-luku:");
+                    try
+                    {
+                        doubleLuku = Convert.ToDouble(Console.ReadLine());
+                    }catch
+                    {
+                        Console.WriteLine("Syötä vain double-lukuja, kiitos");
+                        Console.WriteLine("--------------------------------");
+                        goto ALKU5;
+                    }
+                    Console.Clear();
+                    double resultDouble = doubleLuku + 1;
+                    Console.WriteLine("Kasvating antamaasi lukua yhdellä. Se on nyt " + resultDouble + ".");
+                    break;
+
+
+            }
+            Console.WriteLine("Paina ENTER palataksesi valikkoon");
+            Console.ReadLine();
+            Console.Clear();
         }
     }
 }   
