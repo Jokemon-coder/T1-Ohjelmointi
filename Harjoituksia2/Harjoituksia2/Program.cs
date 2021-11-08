@@ -122,7 +122,7 @@ namespace Harjoituksia2
             {
                 if (luku2 == luku3)
                 {
-                   Console.WriteLine("Luvut ovat samanarvoisia");
+                   Console.WriteLine("Kaikki luvut ovat samanarvoisia");
                 }
 
             }
@@ -218,7 +218,7 @@ namespace Harjoituksia2
                     {
                         if (luku4 == luku5)
                         {
-                            Console.WriteLine("Luvut ovat samanarvoisia");
+                            Console.WriteLine("Kaikki luvut ovat samanarvoisia");
                         }
                     }
                 }
