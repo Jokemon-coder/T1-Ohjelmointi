@@ -41,7 +41,7 @@ namespace Harjoituksia2
                     break;
                 case "5":
                     Console.Clear();
-                    ohjelma5(0, 0, 0);
+                    ohjelma5(0, 0, null);
                     break;
                 case "6":
                     Console.Clear();
@@ -233,10 +233,10 @@ namespace Harjoituksia2
 
         }
 
-        static void ohjelma5(int kokonaisLuku, double doubleLuku, int merkkiJono)
+        static void ohjelma5(int kokonaisLuku, double doubleLuku, string merkkiJono)
         {
 
-            merkkiJono.ToString();
+            
 
         ALKU5:
             Console.WriteLine("Valitse syötettävä arvo:");
@@ -276,6 +276,13 @@ namespace Harjoituksia2
                     Console.Clear();
                     double resultDouble = doubleLuku + 1;
                     Console.WriteLine("Kasvating antamaasi lukua yhdellä. Se on nyt " + resultDouble + ".");
+                    break;
+                case "3":
+                    Console.WriteLine("Syötä merkkijono:");
+                    merkkiJono = Console.ReadLine();
+                    string merkki = "*";
+                    string resultMerkki = merkkiJono += merkki; 
+                    Console.WriteLine("Lisäsin merkin * syöttämääsi merkkijonoon. Se on nyt " + resultMerkki + ".");
                     break;
 
 
