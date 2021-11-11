@@ -45,7 +45,7 @@ namespace Harjoituksia2
                     break;
                 case "6":
                     Console.Clear();
-
+                    ohjelma6(0);
                     break;
                 case "7":
                     Console.Clear();
@@ -280,17 +280,63 @@ namespace Harjoituksia2
                 case "3":
                     Console.WriteLine("Syötä merkkijono:");
                     merkkiJono = Console.ReadLine();
-                    string merkki = "*";
-                    string resultMerkki = merkkiJono += merkki; 
+                    char merkki = '*';
+                    string resultMerkki = new string(merkkiJono += merkki);
                     Console.WriteLine("Lisäsin merkin * syöttämääsi merkkijonoon. Se on nyt " + resultMerkki + ".");
                     break;
-
-
             }
             Console.WriteLine("Paina ENTER palataksesi valikkoon");
             Console.ReadLine();
             Console.Clear();
         }
+
+        static void ohjelma6(int luku)
+        {
+        ALKU6:
+            Console.WriteLine("Syötä luku 1-9:");
+
+
+            string pisteet = Console.ReadLine();
+            switch (pisteet)
+            {
+                case "1":
+                    Console.WriteLine("Pisteesi ovat nyt " + (1 * 10));
+                    break;
+                case "2":
+                    Console.WriteLine("Pisteesi ovat nyt " + (2 * 10));
+                    break;
+                case "3":
+                    Console.WriteLine("Pisteesi ovat nyt " + (3 * 10));
+                    break;
+                case "4":
+                    Console.WriteLine("Pisteesi ovat nyt " + (4 * 100));
+                    break;
+                case "5":
+                    Console.WriteLine("Pisteesi ovat nyt " + (5 * 100));
+                    break;
+                case "6":
+                    Console.WriteLine("Pisteesi ovat nyt " + (6 * 100));
+                    break;
+                case "7":
+                    Console.WriteLine("Pisteesi ovat nyt " + (7 * 1000));
+                    break;
+                case "8":
+                    Console.WriteLine("Pisteesi ovat nyt " + (8 * 1000));
+                    break;
+                case "9":
+                    Console.WriteLine("Pisteesi ovat nyt " + (9 * 1000));
+                    break;
+                default:
+                    Console.WriteLine("Syötä vain kokonaislukuja, jotka ovat väliltä 1-9. Paina ENTER yrittääksesi uudelleen.");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto ALKU6;
+
+            }
+            Console.WriteLine("Paina ENTER palataksesi valikkoon");
+            Console.ReadLine();
+            Console.Clear();       
+        }
     }
-}   
+}
 
