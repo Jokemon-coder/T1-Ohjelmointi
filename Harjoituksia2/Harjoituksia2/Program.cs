@@ -25,11 +25,11 @@ namespace Harjoituksia2
             {
                 case "1":
                     Console.Clear();
-                    ohjelma1(0, 1);
+                    ohjelma1();
                     break;
                 case "2":
                     Console.Clear();
-                    ohjelma2(0, 1, 2);
+                    ohjelma2();
                     break;
                 case "3":
                     Console.Clear();
@@ -37,18 +37,19 @@ namespace Harjoituksia2
                     break;
                 case "4":
                     Console.Clear();
-                    ohjelma4(0, 0, 0, 0, 0);
+                    ohjelma4();
                     break;
                 case "5":
                     Console.Clear();
-                    ohjelma5(0, 0, null);
+                    ohjelma5();
                     break;
                 case "6":
                     Console.Clear();
-                    ohjelma6(0);
+                    ohjelma6();
                     break;
                 case "7":
                     Console.Clear();
+                    ohjelma7();
 
                     break;
                 default:
@@ -62,9 +63,12 @@ namespace Harjoituksia2
             goto ALKU;
         }
 
-        static void ohjelma1(int luku1, int luku2)
+        static void ohjelma1()
         {
         ALKU1:
+            int luku1;
+            int luku2;
+            
             Console.WriteLine("Syötä kaksi kokonaislukua, jotta voin järjestää ne suuruusjärjestykseen:");
             try
             {
@@ -97,9 +101,12 @@ namespace Harjoituksia2
 
         }
 
-        static void ohjelma2(int luku1, int luku2, int luku3)
+        static void ohjelma2()
         {
         ALKU2:
+            int luku1;
+            int luku2;
+            int luku3;
             Console.WriteLine("Syötä kolme kokonaislukua, jotta voin etsiä niistä suurimman");
 
             try
@@ -135,60 +142,68 @@ namespace Harjoituksia2
             Console.Clear();
         }
 
-        public static void ohjelma3()
+        static void ohjelma3()
         {
         ALKU3:
             Console.Clear();
             Console.WriteLine("Anna numero 0 ja 9 väliltä, jotta voin muuttaa sen sanaksi");
 
-            string nimi = Console.ReadLine();
-            switch (nimi)
+            int numero = Convert.ToInt32(Console.ReadLine());
+            string nimi = "";
+            switch (numero)
             {
 
-                case "0":
-                    Console.WriteLine("Nolla");
+                case 0:
+                    nimi = "Nolla";                   
                     break;
-                case "1":
-                    Console.WriteLine("Yksi");
+                case 1:
+                    nimi = "Yksi";
                     break;
-                case "2":
-                    Console.WriteLine("Kaksi");
+                case 2:
+                    nimi = "Kaksi";
                     break;
-                case "3":
-                    Console.WriteLine("Kolme");
+                case 3:
+                    nimi = "Kolme";
                     break;
-                case "4":
-                    Console.WriteLine("Neljä");
+                case 4:
+                    nimi = "Neljä";
                     break;
-                case "5":
-                    Console.WriteLine("Viisi");
+                case 5:
+                    nimi = "Viisi";
                     break;
-                case "6":
-                    Console.WriteLine("Kuusi");
+                case 6:
+                    nimi = "Kuusi";
                     break;
-                case "7":
-                    Console.WriteLine("Seitsemän");
+                case 7:
+                    nimi = "Seitsemän";
                     break;
-                case "8":
-                    Console.WriteLine("Kahdeksan");
+                case 8:
+                    nimi = "Kahdeksan";
                     break;
-                case "9":
-                    Console.WriteLine("Yhdeksän");
+                case 9:
+                    nimi = "Yhdeksän";
                     break;
                 default:
                     Console.WriteLine("Annoit väärän luvun, yritä uudelleen painamalla ENTER");
                     Console.ReadLine();
                     Console.Clear();
                     goto ALKU3;
+
             }
+            Console.WriteLine(nimi);
             Console.WriteLine("Paina ENTER palataksesi valikkoon");
             Console.ReadLine();
             Console.Clear();
 
         }
-        static void ohjelma4(int luku1, int luku2, int luku3, int luku4, int luku5)
+        static void ohjelma4()
         {
         ALKU4:
+            int luku1;
+            int luku2;
+            int luku3; 
+            int luku4;
+            int luku5;
             Console.WriteLine("Syötä viisi kokonaislukua, jotta voin etsiä niistä suurimman");
 
             try
@@ -233,12 +248,12 @@ namespace Harjoituksia2
 
         }
 
-        static void ohjelma5(int kokonaisLuku, double doubleLuku, string merkkiJono)
+        static void ohjelma5()
         {
-
-            
-
         ALKU5:
+            int kokonaisLuku;
+            double doubleLuku;
+            string merkkiJono;
             Console.WriteLine("Valitse syötettävä arvo:");
             Console.WriteLine("Paina 1, jos haluat syöttää kokonaisluvun");
             Console.WriteLine("Paina 2, jos haluat syöttää double-luvun");
@@ -290,40 +305,39 @@ namespace Harjoituksia2
             Console.Clear();
         }
 
-        static void ohjelma6(int luku)
+        static void ohjelma6()
         {
         ALKU6:
             Console.WriteLine("Syötä luku 1-9:");
-
-
-            string pisteet = Console.ReadLine();
-            switch (pisteet)
+            
+            int numero = Convert.ToInt32(Console.ReadLine());
+            switch (numero)
             {
-                case "1":
+                case 1:
                     Console.WriteLine("Pisteesi ovat nyt " + (1 * 10));
                     break;
-                case "2":
+                case 2:
                     Console.WriteLine("Pisteesi ovat nyt " + (2 * 10));
                     break;
-                case "3":
+                case 3:
                     Console.WriteLine("Pisteesi ovat nyt " + (3 * 10));
                     break;
-                case "4":
+                case 4:
                     Console.WriteLine("Pisteesi ovat nyt " + (4 * 100));
                     break;
-                case "5":
+                case 5:
                     Console.WriteLine("Pisteesi ovat nyt " + (5 * 100));
                     break;
-                case "6":
+                case 6:
                     Console.WriteLine("Pisteesi ovat nyt " + (6 * 100));
                     break;
-                case "7":
+                case 7:
                     Console.WriteLine("Pisteesi ovat nyt " + (7 * 1000));
                     break;
-                case "8":
+                case 8:
                     Console.WriteLine("Pisteesi ovat nyt " + (8 * 1000));
                     break;
-                case "9":
+                case 9:
                     Console.WriteLine("Pisteesi ovat nyt " + (9 * 1000));
                     break;
                 default:
@@ -336,6 +350,12 @@ namespace Harjoituksia2
             Console.WriteLine("Paina ENTER palataksesi valikkoon");
             Console.ReadLine();
             Console.Clear();       
+        }
+        
+        static void ohjelma7()
+        {
+        
+
         }
     }
 }
