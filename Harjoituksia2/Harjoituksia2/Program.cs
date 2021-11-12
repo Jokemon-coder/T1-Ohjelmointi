@@ -18,7 +18,6 @@ namespace Harjoituksia2
             Console.WriteLine("Ohjelma 4");
             Console.WriteLine("Ohjelma 5");
             Console.WriteLine("Ohjelma 6");
-            Console.WriteLine("Ohjelma 7");
 
             string ohjelmat = Console.ReadLine();
             switch (ohjelmat)
@@ -47,17 +46,12 @@ namespace Harjoituksia2
                     Console.Clear();
                     ohjelma6();
                     break;
-                case "7":
+               default:
                     Console.Clear();
-                    ohjelma7();
-
-                    break;
-                default:
-                    Console.Clear();
-                    Console.WriteLine("Et syöttänyt oikeaa numeroa");
+                    Console.WriteLine("Et syöttänyt oikeaa numeroa. Paina ENTER palataksesi valikkoon.");
                     Console.ReadLine();
                     Console.Clear();
-                    break;
+                    break; 
             }
 
             goto ALKU;
@@ -68,7 +62,7 @@ namespace Harjoituksia2
         ALKU1:
             int luku1;
             int luku2;
-            
+
             Console.WriteLine("Syötä kaksi kokonaislukua, jotta voin järjestää ne suuruusjärjestykseen:");
             try
             {
@@ -129,7 +123,7 @@ namespace Harjoituksia2
             {
                 if (luku2 == luku3)
                 {
-                   Console.WriteLine("Kaikki luvut ovat samanarvoisia");
+                    Console.WriteLine("Kaikki luvut ovat samanarvoisia");
                 }
 
             }
@@ -154,7 +148,7 @@ namespace Harjoituksia2
             {
 
                 case 0:
-                    nimi = "Nolla";                   
+                    nimi = "Nolla";
                     break;
                 case 1:
                     nimi = "Yksi";
@@ -187,7 +181,7 @@ namespace Harjoituksia2
                     Console.WriteLine("Annoit väärän luvun, yritä uudelleen painamalla ENTER");
                     Console.ReadLine();
                     Console.Clear();
-                    goto ALKU3;
+                    goto ALKU3; 
 
             }
             Console.WriteLine(nimi);
@@ -201,7 +195,7 @@ namespace Harjoituksia2
         ALKU4:
             int luku1;
             int luku2;
-            int luku3; 
+            int luku3;
             int luku4;
             int luku5;
             Console.WriteLine("Syötä viisi kokonaislukua, jotta voin etsiä niistä suurimman");
@@ -213,7 +207,8 @@ namespace Harjoituksia2
                 luku3 = int.Parse(Console.ReadLine());
                 luku4 = int.Parse(Console.ReadLine());
                 luku5 = int.Parse(Console.ReadLine());
-            } catch
+            }
+            catch
             {
                 Console.WriteLine("Syötä vain kokonaislukuja, kiitos");
                 Console.WriteLine("---------------------------------");
@@ -237,7 +232,8 @@ namespace Harjoituksia2
                         }
                     }
                 }
-            } else
+            }
+            else
             {
                 Console.WriteLine(suurin + " on suurin");
             }
@@ -267,7 +263,8 @@ namespace Harjoituksia2
                     try
                     {
                         kokonaisLuku = int.Parse(Console.ReadLine());
-                    }catch
+                    }
+                    catch
                     {
                         Console.WriteLine("Syötä vain kokonaislukuja, kiitos");
                         Console.WriteLine("---------------------------------");
@@ -282,7 +279,8 @@ namespace Harjoituksia2
                     try
                     {
                         doubleLuku = Convert.ToDouble(Console.ReadLine());
-                    }catch
+                    }
+                    catch
                     {
                         Console.WriteLine("Syötä vain double-lukuja, kiitos");
                         Console.WriteLine("--------------------------------");
@@ -309,7 +307,7 @@ namespace Harjoituksia2
         {
         ALKU6:
             Console.WriteLine("Syötä luku 1-9:");
-            
+
             int numero = Convert.ToInt32(Console.ReadLine());
             switch (numero)
             {
@@ -349,14 +347,11 @@ namespace Harjoituksia2
             }
             Console.WriteLine("Paina ENTER palataksesi valikkoon");
             Console.ReadLine();
-            Console.Clear();       
+            Console.Clear();
         }
-        
-        static void ohjelma7()
-        {
-        
 
-        }
+
     }
 }
+
 
