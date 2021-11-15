@@ -22,6 +22,7 @@ namespace Harjoituksia1
             Console.WriteLine("Tulostus 7 painamalla 7");
             Console.WriteLine("Tulostus 8 painamalla 8");
             Console.WriteLine("Tulostus 9 painamalla 9");
+            //Tulostaa käyttäjälle vaihtoehdot ja miten ne valitaan
 
             string tulostus = Console.ReadLine();
             switch (tulostus)
@@ -70,8 +71,10 @@ namespace Harjoituksia1
                     Console.ReadLine();
                     Console.Clear();
                     break;
+                //Valitaan mikä ohjelma avataan käyttäjän syöttämän numeron avulla käyttäen switch-case.
             }
             goto ALKU;
+            //Vie ohjelman takaisin alkuun
         }
 
         public static void tulostus1(int x, int y)
@@ -86,6 +89,7 @@ namespace Harjoituksia1
                 Console.WriteLine("Syötit väärän arvon. Yritä uudelleen.");
                 goto ALKU1;
             }
+            //Tarkistaa onko syötetty arvo kokonaisluku ja antaa viestin jos ei ole. Menee takaisin syöttöön virheen jälkeen.
 
             if (x == 10)
             {
@@ -95,8 +99,8 @@ namespace Harjoituksia1
             {
                 Console.WriteLine("Syötit väärän arvon, yritä uudelleen.");
                 goto ALKU1;
-            } 
-
+            }
+            //Jos arvo on oikea, ohjelma jatkuu. Jos ei ole, menee takaisin syöttöön.
 
         ALKU2:
             try { y = int.Parse(Console.ReadLine()); }
@@ -122,6 +126,8 @@ namespace Harjoituksia1
                 Console.WriteLine("Syötit väärän arvon, yritä uudelleen");
                 goto ALKU2;
             }
+            //Jos arvo y:n arvo on oikein, ohjelma tulostaa laskut ja tulokset. Jos ei ole oikein, menee takaisin syöttöön.
+            //Tämän ensimmäisen ohjelman kommentointi pätee kaikkiin tuleviin ohjelmiin.
 
             
         }
@@ -140,6 +146,7 @@ namespace Harjoituksia1
                 Console.WriteLine("Syötit väärän arvon. Yritä uudelleen.");
                 goto ALKU1;
             }
+            
 
             if (x == 10)
             {
