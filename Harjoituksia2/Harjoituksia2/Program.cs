@@ -282,15 +282,15 @@ namespace Harjoituksia2
                         goto ALKU5;
                     }//Katsoo onko annettu arvo kokonaisluku.
                     Console.Clear();
-                    int resultKoko = kokonaisLuku + 1;
+                    int resultKoko = ++kokonaisLuku;
                     Console.WriteLine("Kasvatin antamaasi lukua yhdellä. Se on nyt " + resultKoko + ".");
                     break;
-                    //Yhteenlaskee annetun luvun yhdellä.
+                    //Kasvattaa annettua lukua yhdellä.
                 case "2":
                     Console.WriteLine("Syötä double-luku:");
                     try
                     {
-                        doubleLuku = Convert.ToDouble(Console.ReadLine());
+                        doubleLuku = Double.Parse(Console.ReadLine());
                     }
                     catch
                     {
@@ -299,10 +299,10 @@ namespace Harjoituksia2
                         goto ALKU5;
                     }
                     Console.Clear();
-                    double resultDouble = doubleLuku + 1;
+                    double resultDouble = ++doubleLuku;
                     Console.WriteLine("Kasvating antamaasi lukua yhdellä. Se on nyt " + resultDouble + ".");
                     break;
-                    //Yhteenlaskee annetun luvun yhdellä.
+                    //Kasvattaa annettua lukua yhdellä.
                 case "3":
                     Console.WriteLine("Syötä merkkijono:");
                     merkkiJono = Console.ReadLine();
