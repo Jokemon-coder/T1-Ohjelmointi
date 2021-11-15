@@ -1,0 +1,16 @@
+C:\Users\Joel\source\repos\T1-Ohjelmointi\harjoituksia3\harjoituksia3\obj\Debug\net5.0\harjoituksia3.csproj.AssemblyReference.cache
+C:\Users\Joel\source\repos\T1-Ohjelmointi\harjoituksia3\harjoituksia3\obj\Debug\net5.0\harjoituksia3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Joel\source\repos\T1-Ohjelmointi\harjoituksia3\harjoituksia3\obj\Debug\net5.0\harjoituksia3.AssemblyInfoInputs.cache
+C:\Users\Joel\source\repos\T1-Ohjelmointi\harjoituksia3\harjoituksia3\obj\Debug\net5.0\harjoituksia3.AssemblyInfo.cs
+C:\Users\Joel\source\repos\T1-Ohjelmointi\harjoituksia3\harjoituksia3\obj\Debug\net5.0\harjoituksia3.csproj.CoreCompileInputs.cache
+C:\Users\Joel\source\repos\T1-Ohjelmointi\harjoituksia3\harjoituksia3\bin\Debug\net5.0\harjoituksia3.exe
+C:\Users\Joel\source\repos\T1-Ohjelmointi\harjoituksia3\harjoituksia3\bin\Debug\net5.0\harjoituksia3.deps.json
+C:\Users\Joel\source\repos\T1-Ohjelmointi\harjoituksia3\harjoituksia3\bin\Debug\net5.0\harjoituksia3.runtimeconfig.json
+C:\Users\Joel\source\repos\T1-Ohjelmointi\harjoituksia3\harjoituksia3\bin\Debug\net5.0\harjoituksia3.runtimeconfig.dev.json
+C:\Users\Joel\source\repos\T1-Ohjelmointi\harjoituksia3\harjoituksia3\bin\Debug\net5.0\harjoituksia3.dll
+C:\Users\Joel\source\repos\T1-Ohjelmointi\harjoituksia3\harjoituksia3\bin\Debug\net5.0\ref\harjoituksia3.dll
+C:\Users\Joel\source\repos\T1-Ohjelmointi\harjoituksia3\harjoituksia3\bin\Debug\net5.0\harjoituksia3.pdb
+C:\Users\Joel\source\repos\T1-Ohjelmointi\harjoituksia3\harjoituksia3\obj\Debug\net5.0\harjoituksia3.dll
+C:\Users\Joel\source\repos\T1-Ohjelmointi\harjoituksia3\harjoituksia3\obj\Debug\net5.0\ref\harjoituksia3.dll
+C:\Users\Joel\source\repos\T1-Ohjelmointi\harjoituksia3\harjoituksia3\obj\Debug\net5.0\harjoituksia3.pdb
+C:\Users\Joel\source\repos\T1-Ohjelmointi\harjoituksia3\harjoituksia3\obj\Debug\net5.0\harjoituksia3.genruntimeconfig.cache
