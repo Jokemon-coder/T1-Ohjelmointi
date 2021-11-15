@@ -1,0 +1,16 @@
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Numerotsanoiksi\Numerotsanoiksi\obj\Debug\net5.0\Numerotsanoiksi.csproj.AssemblyReference.cache
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Numerotsanoiksi\Numerotsanoiksi\obj\Debug\net5.0\Numerotsanoiksi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Numerotsanoiksi\Numerotsanoiksi\obj\Debug\net5.0\Numerotsanoiksi.AssemblyInfoInputs.cache
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Numerotsanoiksi\Numerotsanoiksi\obj\Debug\net5.0\Numerotsanoiksi.AssemblyInfo.cs
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Numerotsanoiksi\Numerotsanoiksi\obj\Debug\net5.0\Numerotsanoiksi.csproj.CoreCompileInputs.cache
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Numerotsanoiksi\Numerotsanoiksi\bin\Debug\net5.0\Numerotsanoiksi.exe
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Numerotsanoiksi\Numerotsanoiksi\bin\Debug\net5.0\Numerotsanoiksi.deps.json
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Numerotsanoiksi\Numerotsanoiksi\bin\Debug\net5.0\Numerotsanoiksi.runtimeconfig.json
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Numerotsanoiksi\Numerotsanoiksi\bin\Debug\net5.0\Numerotsanoiksi.runtimeconfig.dev.json
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Numerotsanoiksi\Numerotsanoiksi\bin\Debug\net5.0\Numerotsanoiksi.dll
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Numerotsanoiksi\Numerotsanoiksi\bin\Debug\net5.0\ref\Numerotsanoiksi.dll
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Numerotsanoiksi\Numerotsanoiksi\bin\Debug\net5.0\Numerotsanoiksi.pdb
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Numerotsanoiksi\Numerotsanoiksi\obj\Debug\net5.0\Numerotsanoiksi.dll
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Numerotsanoiksi\Numerotsanoiksi\obj\Debug\net5.0\ref\Numerotsanoiksi.dll
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Numerotsanoiksi\Numerotsanoiksi\obj\Debug\net5.0\Numerotsanoiksi.pdb
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Numerotsanoiksi\Numerotsanoiksi\obj\Debug\net5.0\Numerotsanoiksi.genruntimeconfig.cache
