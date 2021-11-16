@@ -25,19 +25,19 @@ namespace harjoituksia3
             {
                 case "1":
                     Console.Clear();
-                    yhteenLasku();
+                    yhteenLasku(5, 9);
                     break;
                 case "2":
                     Console.Clear();
-                    asteMuunnos(1.8, 32);
+                    asteMuunnos(25, 1.8, 32);
                     break;
                 case "3":
                     Console.Clear();
-                    perusLaskut();
+                    perusLaskut(9, 3);
                     break;
                 case "4":
                     Console.Clear();
-                    jakoJaannos();
+                    jakoJaannos(8, 2);
                     break;
                 case "5":
                     Console.Clear();
@@ -59,120 +59,182 @@ namespace harjoituksia3
             goto ALKU;
         }
 
-        static void yhteenLasku()
+        static void yhteenLasku(int luku1, int luku2)
         {
-        ALKU1:
-            int luku1;
-            int luku2;
+            Console.WriteLine("Valitse valmis yhteenlasku painamalla 1 tai yhteenlasku omilla luvuilla painamalla 2:");
+            string versiotYT = Console.ReadLine();
+            switch (versiotYT)
+            {
+                case "1":
+                    Console.Clear();
+                    Console.WriteLine("Lukujen " + luku1 + " ja " + luku2 + " summa on " + (luku1 + luku2));
+                    Console.WriteLine("Paina ENTER palataksesi valikkoon:");
+                    Console.ReadLine();
+                    Console.Clear();
+                    break;
+                case "2":
+                ALKU1:
+                    Console.WriteLine("Syötä kaksi lukua, jotta voin laskea ne yhteen:");
+                    try
+                    {
+                        luku1 = int.Parse(Console.ReadLine());
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Syötä vain kokonaislukuja.");
+                        goto ALKU1;
+                    }
+                    try
+                    {
+                        luku2 = int.Parse(Console.ReadLine());
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Syötä vain kokonaislukuja.");
+                        Console.WriteLine("Paina ENTER yrittääksesi uudelleen:");
+                        Console.ReadLine();
+                        Console.Clear();
+                        goto ALKU1;
 
-            Console.WriteLine("Syötä kaksi lukua, jotta voin laskea ne yhteen:");
-            try
-            {
-                luku1 = int.Parse(Console.ReadLine());
-            }catch
-            {
-                Console.WriteLine("Syötä vain kokonaislukuja.");
-                goto ALKU1;
+                    }
+                    Console.WriteLine("Lukujen " + luku1 + " ja " + luku2 + " summa on " + (luku1 + luku2));
+                    Console.WriteLine("Paina ENTER palataksesi valikkoon:");
+                    Console.ReadLine();
+                    Console.Clear();
+                    break;
             }
-            try
-            {
-                luku2 = int.Parse(Console.ReadLine());
-            }catch
-            {
-                Console.WriteLine("Syötä vain kokonaislukuja.");
-                Console.WriteLine("Paina ENTER yrittääksesi uudelleen:");
-                Console.ReadLine();
-                Console.Clear();
-                goto ALKU1;
-
-            }
-            Console.WriteLine("Lukujen " + luku1 + " ja " + luku2 + " summa on " + (luku1 + luku2));
-            Console.WriteLine("Paina ENTER palataksesi valikkoon:");
-            Console.ReadLine();
-            Console.Clear();
-        }
-
-        static void asteMuunnos(double kerroin, int lisays)
-        {
-        ALKU2:
-            double celsiusLuku;
-
-            Console.WriteLine("Syötä Celsius-asteet, niin muunnan ne Fahrenheiteiksi:");
-            try
-            {
-                celsiusLuku = Double.Parse(Console.ReadLine());
-            }catch
-            {
-                Console.WriteLine("Syötä vain kokonaislukuja tai desimaaleja.");
-                Console.WriteLine("Paina ENTER yrittääksesi uudelleen:");
-                Console.ReadLine();
-                Console.Clear();
-                goto ALKU2;
-            }
-
-            Console.WriteLine(celsiusLuku + " Celsius-astetta on Fahrenheiteissa " + (celsiusLuku * kerroin + lisays));
-            Console.WriteLine("Paina ENTER palataksesi valikkoon:");
-            Console.ReadLine();
-            Console.Clear();
 
         }
 
-        static void perusLaskut()
-        {
-        ALKU3:
             
-            double luku1;
-            double luku2;
             
-            Console.WriteLine("Syötä kaksi kokonaislukua:");
-            try
+        
+
+        static void asteMuunnos(double celsiusLuku, double kerroin, int lisays)
+        {
+            Console.WriteLine("Valitse valmis Celsius-asteen muunnos painamalla 1 tai oman Celcius-asteen muunnos painamalla 2:");
+            string versiotAM = Console.ReadLine();
+            switch (versiotAM)
             {
-                luku1 = Double.Parse(Console.ReadLine());
-                luku2 = Double.Parse(Console.ReadLine());
-            }catch
-            {
-                Console.WriteLine("Syötä vain numeroita, kiitos.");
-                Console.WriteLine("Paina ENTER yrittääksesi uudelleen:");
-                Console.ReadLine();
-                Console.Clear();
-                goto ALKU3;
+                case "1":
+                    Console.Clear();
+                    Console.WriteLine(celsiusLuku + " Celsius-astetta on Fahrenheitteina " + (celsiusLuku * kerroin + lisays));
+                    Console.WriteLine("Paina ENTER palataksesi valikkoon:");
+                    Console.ReadLine();
+                    Console.Clear();
+                    break;
+                case "2":
+                ALKU2:
+                    Console.WriteLine("Syötä Celsius-asteet, niin muunnan ne Fahrenheiteiksi:");
+                    try
+                    {
+                        celsiusLuku = Double.Parse(Console.ReadLine());
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Syötä vain kokonaislukuja tai desimaaleja.");
+                        Console.WriteLine("Paina ENTER yrittääksesi uudelleen:");
+                        Console.ReadLine();
+                        Console.Clear();
+                        goto ALKU2;
+                    }
+                    Console.WriteLine(celsiusLuku + " Celsius-astetta on Fahrenheiteissa " + (celsiusLuku * kerroin + lisays));
+                    
+                    Console.WriteLine("Paina ENTER palataksesi valikkoon:");
+                    Console.ReadLine();
+                    Console.Clear();
+                    break;
             }
 
-            Console.WriteLine("Lukujen " + luku1 + " ja " + luku2 + " peruslaskutoimitukset:");
-            Console.WriteLine("Summa on " + (luku1 + luku2));
-            Console.WriteLine("Vähennys on " + (luku1 - luku2));
-            Console.WriteLine("Kerto on " + (luku1 * luku2));
-            Console.WriteLine("Jako on " + (luku1 / luku2));
-
-            Console.WriteLine("Paina ENTER palataksesi valikkoon:");
-            Console.ReadLine();
-            Console.Clear();
         }
 
-        static void jakoJaannos()
+        static void perusLaskut(double luku1, double luku2)
         {
-        ALKU4:
-            int luku1;
-            int luku2;
+            Console.WriteLine("Valitse peruslaskut valmiilla luvuilla painamalla 1 tai tee peruslaskut omilla luvuilla painamalla 2:");
+            string versiotPL = Console.ReadLine();
+            switch (versiotPL)
+            {
+                case "1":
+                    Console.Clear();
+                    Console.WriteLine("Lukujen " + luku1 + " ja " + luku2 + " peruslaskutoimitukset:");
+                    Console.WriteLine("Summa on " + (luku1 + luku2));
+                    Console.WriteLine("Erotus on " + (luku1 - luku2));
+                    Console.WriteLine("Tulo on " + (luku1 * luku2));
+                    Console.WriteLine("Osamäärä on " + (luku1 / luku2));
 
-            Console.WriteLine("Syötä kaksi lukua, niin annan niiden jakojäännöksen:");
-            try
+                    Console.WriteLine("Paina ENTER palataksesi valikkoon:");
+                    Console.ReadLine();
+                    Console.Clear();
+                    break;
+                case "2":
+                ALKU3:
+                    Console.WriteLine("Syötä kaksi kokonaislukua:");
+                    try
+                    {
+                        luku1 = Double.Parse(Console.ReadLine());
+                        luku2 = Double.Parse(Console.ReadLine());
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Syötä vain numeroita, kiitos.");
+                        Console.WriteLine("Paina ENTER yrittääksesi uudelleen:");
+                        Console.ReadLine();
+                        Console.Clear();
+                        goto ALKU3;
+                    }
+
+                    Console.WriteLine("Lukujen " + luku1 + " ja " + luku2 + " peruslaskutoimitukset:");
+                    Console.WriteLine("Summa on " + (luku1 + luku2));
+                    Console.WriteLine("Erotus on " + (luku1 - luku2));
+                    Console.WriteLine("Tulo on " + (luku1 * luku2));
+                    Console.WriteLine("Osamäärä on " + (luku1 / luku2));
+
+                    Console.WriteLine("Paina ENTER palataksesi valikkoon:");
+                    Console.ReadLine();
+                    Console.Clear();
+                    break;
+            }
+        }
+
+        static void jakoJaannos(int luku1, int luku2)
+        {
+            Console.WriteLine("Valitse jakojäännös valmiilla luvuilla painamalla 1 tai jakojäännös omilla luvuilla painamalla 2:");
+            string versiotJJ = Console.ReadLine();
+            switch (versiotJJ)
             {
-                luku1 = int.Parse(Console.ReadLine());
-                luku2 = int.Parse(Console.ReadLine());
-            }catch
-            {
-                Console.WriteLine("Syötä vain kokonaislukuja, kiitos.");
-                Console.WriteLine("Paina ENTER yrittääksesi uudelleen:");
-                Console.ReadLine();
-                Console.Clear();
-                goto ALKU4;
+                case "1":
+                    Console.Clear();
+                    Console.WriteLine("Lukujen " + luku1 + " ja " + luku2 + " jakojäännös on " + (luku1 % luku2));
+
+                    Console.WriteLine("Paina ENTER palataksesi valikkoon:");
+                    Console.ReadLine();
+                    Console.Clear();
+                    break;
+                case "2":
+                ALKU4:
+                    Console.WriteLine("Syötä kaksi lukua, niin annan niiden jakojäännöksen:");
+                    try
+                    {
+                        luku1 = int.Parse(Console.ReadLine());
+                        luku2 = int.Parse(Console.ReadLine());
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Syötä vain kokonaislukuja, kiitos.");
+                        Console.WriteLine("Paina ENTER yrittääksesi uudelleen:");
+                        Console.ReadLine();
+                        Console.Clear();
+                        goto ALKU4;
+                    }
+                    Console.WriteLine("Lukujen " + luku1 + " ja " + luku2 + " jakojäännös on " + (luku1 % luku2));
+                    
+                    Console.WriteLine("Paina ENTER palataksesi valikkoon:");
+                    Console.ReadLine();
+                    Console.Clear();
+                    break;
             }
 
-            Console.WriteLine("Lukujen " + luku1 + " ja " + luku2 + " jakojäännös on " + (luku1 % luku2));
-            Console.WriteLine("Paina ENTER palataksesi valikkoon:");
-            Console.ReadLine();
-            Console.Clear();
+
         }
 
         static void tervehdys(string etuNimi, string sukuNimi)
@@ -210,3 +272,4 @@ namespace harjoituksia3
         
     }
 }
+
