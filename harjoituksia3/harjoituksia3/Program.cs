@@ -17,7 +17,14 @@ namespace harjoituksia3
             Console.WriteLine("Peruslaskut(3)");
             Console.WriteLine("Jakojäännös(4)");
             Console.WriteLine("Tervehdys(5)");
-            Console.WriteLine("Harjoitus(6)");
+            Console.WriteLine("Kertotaulu(6)");
+            Console.WriteLine("Käyttäjän ikä(7)");
+            Console.WriteLine("Monikertainen tulostus(8)");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
             //Tulostaa käyttäjälle vaihtoehdot ja miten ne valitaan.
 
             string ohjelmat = Console.ReadLine();
@@ -45,7 +52,35 @@ namespace harjoituksia3
                     break;
                 case "6":
                     Console.Clear();
-                    
+                    kertoTaulu();
+                    break;
+                case "7":
+                    Console.Clear();
+                    kayttajanIka();
+                    break;
+                case "8":
+                    Console.Clear();
+                    moniTulostus();
+                    break;
+                case "9":
+                    Console.Clear();
+
+                    break;
+                case "10":
+                    Console.Clear();
+
+                    break;
+                case "11":
+                    Console.Clear();
+
+                    break;
+                case "12":
+                    Console.Clear();
+
+                    break;
+                case "13":
+                    Console.Clear();
+
                     break;
                 default:
                     Console.Clear();
@@ -268,6 +303,102 @@ namespace harjoituksia3
             Console.WriteLine("Paina ENTER palataksesi valikkoon:");
             Console.ReadLine();
             Console.Clear();
+        }
+
+        static void kertoTaulu()
+        {
+        ALKU6:
+            int kerrottavaLuku, kerroin;
+            Console.Write("Syötä luku 1 - 10 väliltä: ");
+            try
+            {
+                kerrottavaLuku = Convert.ToInt32(Console.ReadLine());
+            }catch
+            {
+                Console.WriteLine("Syötä vain numeroita, kiitos.");
+                Console.WriteLine("Paina ENTER palataksesi syöttöön:");
+                Console.ReadLine();
+                Console.Clear();
+                goto ALKU6;
+            }
+
+
+            if (kerrottavaLuku < 1)
+            {
+                Console.WriteLine("En ota lukua 0 vastaan.");
+                Console.WriteLine("Paina ENTER palataksesi syöttöön:");
+                Console.ReadLine();
+                Console.Clear();
+                goto ALKU6;
+            } else if (kerrottavaLuku > 10)
+            {
+                Console.WriteLine("En ota suurempaa lukua kuin 10 vastaan.");
+                Console.WriteLine("Paina ENTER palataksesi syöttöön:");
+                Console.ReadLine();
+                Console.Clear();
+                goto ALKU6;
+            } else
+            for (kerroin = 1; kerroin <= 10; kerroin++)
+            {
+                Console.WriteLine("{0} x {1} = {2}", kerrottavaLuku, kerroin, (kerrottavaLuku * kerroin));
+            }
+            Console.WriteLine("Paina ENTER palataksesi valikkoon:");
+            Console.ReadLine();
+            Console.Clear();
+        }
+        
+        static void kayttajanIka()
+        {
+        ALKU7:
+            int ika;
+            Console.Write("Syötä ikäsi: ");
+            try
+            {
+                ika = int.Parse(Console.ReadLine());
+            }catch
+            {
+                Console.WriteLine("Syötä vain kokonaislukuja, kiitos.");
+                Console.WriteLine("Paina ENTER palataksesi syöttöön:");
+                Console.ReadLine();
+                Console.Clear();
+                goto ALKU7;
+            }
+            Console.WriteLine(ika + "?" + " Näytät ikäistäsi nuoremmalta.");
+            Console.WriteLine("Paina ENTER palataksesi valikkoon:");
+            Console.ReadLine();
+            Console.Clear();
+        }
+
+        static void moniTulostus()
+        {
+        ALKU8:
+            int kayttajanLuku;
+            Console.WriteLine("Syötä jokin luku suurempi kuin 10: ");
+            try
+            {
+                kayttajanLuku = int.Parse(Console.ReadLine());
+            } catch
+            {
+                Console.WriteLine("Syötä vain kokonaislukuja, kiitos.");
+                Console.WriteLine("Paina ENTER palataksesi syöttöön:");
+                Console.ReadLine();
+                Console.Clear();
+                goto ALKU8;
+            }
+            if (kayttajanLuku < 10)
+            {
+                Console.WriteLine("En ota vastaan lukuja alle 10.");
+                Console.WriteLine("Paina ENTER palataksesi syöttöön:");
+                Console.ReadLine();
+                Console.Clear();
+                goto ALKU8;
+            }else
+            for (int i = 0; i < kayttajanLuku; i++)
+            {
+                Console.Write(kayttajanLuku);
+            }
+
+
         }
         
     }
