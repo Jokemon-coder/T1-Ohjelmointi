@@ -20,11 +20,11 @@ namespace harjoituksia3
             Console.WriteLine("Kertotaulu(6)");
             Console.WriteLine("Käyttäjän ikä(7)");
             Console.WriteLine("Monikertainen tulostus(8)");
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
+            Console.WriteLine("Etu- ja sukunimen kirjainten vaihto(9)");
+            Console.WriteLine("Kokonaisluvut positiivinen ja negatiivinen(10)");
+            Console.WriteLine("Lauseen pisin sana(11)");
+            Console.WriteLine("Parittomat luvut(12)");
+            Console.WriteLine("3:lla jaolliset luvut(13)");
             //Tulostaa käyttäjälle vaihtoehdot ja miten ne valitaan.
 
             string ohjelmat = Console.ReadLine();
@@ -64,11 +64,11 @@ namespace harjoituksia3
                     break;
                 case "9":
                     Console.Clear();
-
+                    nimiKirjainVaihto(null, null);
                     break;
                 case "10":
                     Console.Clear();
-
+                    posNegLuvut();
                     break;
                 case "11":
                     Console.Clear();
@@ -141,9 +141,9 @@ namespace harjoituksia3
 
         }
 
-            
-            
-        
+
+
+
 
         static void asteMuunnos(double celsiusLuku, double kerroin, int lisays)
         {
@@ -174,7 +174,7 @@ namespace harjoituksia3
                         goto ALKU2;
                     }
                     Console.WriteLine(celsiusLuku + " Celsius-astetta on Fahrenheiteissa " + (celsiusLuku * kerroin + lisays));
-                    
+
                     Console.WriteLine("Paina ENTER palataksesi valikkoon:");
                     Console.ReadLine();
                     Console.Clear();
@@ -262,7 +262,7 @@ namespace harjoituksia3
                         goto ALKU4;
                     }
                     Console.WriteLine("Lukujen " + luku1 + " ja " + luku2 + " jakojäännös on " + (luku1 % luku2));
-                    
+
                     Console.WriteLine("Paina ENTER palataksesi valikkoon:");
                     Console.ReadLine();
                     Console.Clear();
@@ -274,10 +274,10 @@ namespace harjoituksia3
 
         static void tervehdys(string etuNimi, string sukuNimi)
         {
-            
+
             Console.WriteLine("Syötä etun- ja sukunimesi:");
 
-            ALKU1:
+        ALKU1:
             Console.Write("Etunimi:");
             etuNimi = Console.ReadLine();
             if (etuNimi == "")
@@ -288,17 +288,17 @@ namespace harjoituksia3
             else
             {
             ALKU2:
-            Console.Write("Sukunimi:");
-            sukuNimi = Console.ReadLine();
-            if (sukuNimi == "")
-            {
-                Console.WriteLine("En ota vastaan tyhjää kenttää.");
-                goto ALKU2;
-            }else
-            {
-                Console.WriteLine("------------------------------");
-                Console.WriteLine("Hei " + etuNimi + " " + sukuNimi + "!");
-            }
+                Console.Write("Sukunimi:");
+                sukuNimi = Console.ReadLine();
+                if (sukuNimi == "")
+                {
+                    Console.WriteLine("En ota vastaan tyhjää kenttää.");
+                    goto ALKU2;
+                } else
+                {
+                    Console.WriteLine("------------------------------");
+                    Console.WriteLine("Hei " + etuNimi + " " + sukuNimi + "!");
+                }
             }
             Console.WriteLine("Paina ENTER palataksesi valikkoon:");
             Console.ReadLine();
@@ -313,7 +313,7 @@ namespace harjoituksia3
             try
             {
                 kerrottavaLuku = Convert.ToInt32(Console.ReadLine());
-            }catch
+            } catch
             {
                 Console.WriteLine("Syötä vain numeroita, kiitos.");
                 Console.WriteLine("Paina ENTER palataksesi syöttöön:");
@@ -338,15 +338,15 @@ namespace harjoituksia3
                 Console.Clear();
                 goto ALKU6;
             } else
-            for (kerroin = 1; kerroin <= 10; kerroin++)
-            {
-                Console.WriteLine("{0} x {1} = {2}", kerrottavaLuku, kerroin, (kerrottavaLuku * kerroin));
-            }
+                for (kerroin = 1; kerroin <= 10; kerroin++)
+                {
+                    Console.WriteLine("{0} x {1} = {2}", kerrottavaLuku, kerroin, (kerrottavaLuku * kerroin));
+                }
             Console.WriteLine("Paina ENTER palataksesi valikkoon:");
             Console.ReadLine();
             Console.Clear();
         }
-        
+
         static void kayttajanIka()
         {
         ALKU7:
@@ -355,7 +355,7 @@ namespace harjoituksia3
             try
             {
                 ika = int.Parse(Console.ReadLine());
-            }catch
+            } catch
             {
                 Console.WriteLine("Syötä vain kokonaislukuja, kiitos.");
                 Console.WriteLine("Paina ENTER palataksesi syöttöön:");
@@ -392,15 +392,99 @@ namespace harjoituksia3
                 Console.ReadLine();
                 Console.Clear();
                 goto ALKU8;
-            }else
-            for (int i = 0; i < kayttajanLuku; i++)
+            } else
+                for (int i = 0; i < kayttajanLuku; i++)
+                {
+                    Console.Write(kayttajanLuku);
+                }
+            Console.WriteLine("Paina ENTER palataksesi valikkoon:");
+            Console.ReadLine();
+            Console.Clear();
+        }
+
+        static void nimiKirjainVaihto(string etuNimi, string sukuNimi)
+        {
+            Console.WriteLine("Syötä etun- ja sukunimesi:");
+
+        ALKU1:
+            Console.Write("Etunimi:");
+            etuNimi = Console.ReadLine();
+            if (etuNimi == "")
             {
-                Console.Write(kayttajanLuku);
+                Console.WriteLine("En ota vastaan tyhjää kenttää.");
+                goto ALKU1;
+            }
+            else
+            {
+            ALKU2:
+                Console.Write("Sukunimi:");
+                sukuNimi = Console.ReadLine();
+                if (sukuNimi == "")
+                {
+                    Console.WriteLine("En ota vastaan tyhjää kenttää.");
+                    goto ALKU2;
+                }
+                else
+                    Console.WriteLine((etuNimi.Length > 1 ? etuNimi.Substring(etuNimi.Length - 1) + etuNimi.Substring(1, etuNimi.Length - 2) + etuNimi.Substring(0, 1) : etuNimi) + " " +
+                    (sukuNimi.Length > 1 ? sukuNimi.Substring(sukuNimi.Length - 1) + sukuNimi.Substring(1, sukuNimi.Length - 2) + sukuNimi.Substring(0, 1) : etuNimi));
+            }
+            Console.WriteLine("Paina ENTER palataksesi valikkoon:");
+            Console.ReadLine();
+            Console.Clear();
+        }
+
+        static void posNegLuvut()
+        {
+        ALKU9:
+            int luku1;
+            int luku2;
+            Console.WriteLine("Syötä kaksi lukua:");
+            try
+            {
+                luku1 = int.Parse(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Syötä vain kokonaislukuja.");
+                goto ALKU9;
+            }
+            try
+            {
+                luku2 = int.Parse(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Syötä vain kokonaislukuja.");
+                Console.WriteLine("Paina ENTER yrittääksesi uudelleen:");
+                Console.ReadLine();
+                Console.Clear();
+                goto ALKU9;
+
             }
 
-
+            if (luku1 > 0 && luku2 > 0)
+            {
+                Console.WriteLine("Molemmat ovat positiivisia.");
+            }
+            else if (luku1 < 0 && luku2 < 0)
+            {
+                Console.WriteLine("Molemmat ovat negatiivisia.");
+            }
+            else if (luku1 == 0 || luku2 ==0)
+            {
+                Console.WriteLine("Älä syötä nollia, kiitos.");
+                Console.WriteLine("Paina ENTER yrittääksesi uudelleen:");
+                Console.ReadLine();
+                Console.Clear();
+                goto ALKU9;
+            }
+            else
+            Console.WriteLine("Toinen on positiivinen ja toinen on negatiivinen.");
+            
+            Console.WriteLine("Paina ENTER palataksesi valikkoon:");
+            Console.ReadLine();
+            Console.Clear();
         }
-        
     }
 }
 
