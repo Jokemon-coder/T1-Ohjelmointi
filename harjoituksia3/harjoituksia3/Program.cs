@@ -23,8 +23,7 @@ namespace harjoituksia3
             Console.WriteLine("Etu- ja sukunimen kirjainten vaihto(9)");
             Console.WriteLine("Kokonaisluvut positiivinen ja negatiivinen(10)");
             Console.WriteLine("Lauseen pisin sana(11)");
-            Console.WriteLine("Parittomat luvut(12)");
-            Console.WriteLine("3:lla jaolliset luvut(13)");
+            Console.WriteLine("Parittomat ja 3:lla jaolliset luvut(12)");
             //Tulostaa käyttäjälle vaihtoehdot ja miten ne valitaan.
 
             string ohjelmat = Console.ReadLine();
@@ -72,15 +71,11 @@ namespace harjoituksia3
                     break;
                 case "11":
                     Console.Clear();
-
+                    pisinSana(null, null);
                     break;
                 case "12":
                     Console.Clear();
-
-                    break;
-                case "13":
-                    Console.Clear();
-
+                    parittomatLuvut();
                     break;
                 default:
                     Console.Clear();
@@ -470,7 +465,7 @@ namespace harjoituksia3
             {
                 Console.WriteLine("Molemmat ovat negatiivisia.");
             }
-            else if (luku1 == 0 || luku2 ==0)
+            else if (luku1 == 0 || luku2 == 0)
             {
                 Console.WriteLine("Älä syötä nollia, kiitos.");
                 Console.WriteLine("Paina ENTER yrittääksesi uudelleen:");
@@ -479,11 +474,88 @@ namespace harjoituksia3
                 goto ALKU9;
             }
             else
-            Console.WriteLine("Toinen on positiivinen ja toinen on negatiivinen.");
-            
+                Console.WriteLine("Toinen on positiivinen ja toinen on negatiivinen.");
+
             Console.WriteLine("Paina ENTER palataksesi valikkoon:");
             Console.ReadLine();
             Console.Clear();
+        }
+
+        static void pisinSana(string lause, string[] lauseenSanat)
+        {
+        ALKU10:
+            Console.WriteLine("Syötä lause:");
+            lause = Console.ReadLine();
+            lauseenSanat = lause.Split(" ");
+            string pisinSana = "";
+
+            for (int i = 0; i < lauseenSanat.Length; i += 1)
+            {
+                string yksiSana = lauseenSanat[i];
+                if (yksiSana.Length > pisinSana.Length)
+                {
+                    pisinSana = yksiSana;
+                }
+                else if (pisinSana.Length == 0)
+                {
+                    Console.WriteLine("En ota vastaan tyhjää.");
+                    Console.WriteLine("Paina ENTER palataksesi syöttöön:");
+                    Console.ReadLine();
+                    Console.Clear();
+                    goto ALKU10;
+                }
+
+            }
+            Console.WriteLine("Lauseen pisin sana: " + pisinSana);
+            Console.WriteLine("Paina ENTER palataksesi valikkoon:");
+            Console.ReadLine();
+            Console.Clear();
+        }
+
+        static void parittomatLuvut()
+        {
+            Console.WriteLine("Valitse ohjelma syöttäen numero:");
+            Console.WriteLine("Parittomat luvut 1-99(1)");
+            Console.WriteLine("3:lla jaolliset luvut 1-99(2)");
+            string ohjelmat = Console.ReadLine();
+            switch (ohjelmat)
+            {
+                case "1":
+                    Console.Clear();
+                    Console.WriteLine("Parittomat luvut 1-99 väliltä:");
+                    for (int n = 1; n < 100; n++)
+                    {
+                        if (n % 2 != 0)
+                        {
+                            Console.WriteLine(n.ToString());
+                        }
+                    }
+                    Console.WriteLine("Paina ENTER palataksesi valikkoon:");
+                    Console.ReadLine();
+                    Console.Clear();
+                    break;
+                case "2":
+                    Console.Clear();
+                    Console.WriteLine("3:lla jaolliset luvut 1-99 väliltä:");
+                    for (int n = 1; n < 100; n++)
+                    {
+                        if (n % 3 == 0)
+                        {
+                            Console.WriteLine(n.ToString());
+                        }
+                    }
+                    Console.WriteLine("Paina ENTER palataksesi valikkoon:");
+                    Console.ReadLine();
+                    Console.Clear();
+                    break;
+                default:
+                    Console.Clear();
+                    Console.WriteLine("Et syöttänyt oikeaa numeroa. Paina ENTER valitaksesi uudelleen.");
+                    Console.ReadLine();
+                    Console.Clear();
+                    break;
+
+            }
         }
     }
 }
