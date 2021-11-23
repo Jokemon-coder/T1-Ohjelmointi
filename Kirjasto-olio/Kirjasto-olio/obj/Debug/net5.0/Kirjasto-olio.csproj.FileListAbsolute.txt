@@ -1,0 +1,17 @@
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Kirjasto-olio\Kirjasto-olio\bin\Debug\net5.0\arvot.csv
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Kirjasto-olio\Kirjasto-olio\bin\Debug\net5.0\Kirjasto-olio.exe
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Kirjasto-olio\Kirjasto-olio\bin\Debug\net5.0\Kirjasto-olio.deps.json
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Kirjasto-olio\Kirjasto-olio\bin\Debug\net5.0\Kirjasto-olio.runtimeconfig.json
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Kirjasto-olio\Kirjasto-olio\bin\Debug\net5.0\Kirjasto-olio.runtimeconfig.dev.json
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Kirjasto-olio\Kirjasto-olio\bin\Debug\net5.0\Kirjasto-olio.dll
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Kirjasto-olio\Kirjasto-olio\bin\Debug\net5.0\ref\Kirjasto-olio.dll
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Kirjasto-olio\Kirjasto-olio\bin\Debug\net5.0\Kirjasto-olio.pdb
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Kirjasto-olio\Kirjasto-olio\obj\Debug\net5.0\Kirjasto-olio.csproj.AssemblyReference.cache
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Kirjasto-olio\Kirjasto-olio\obj\Debug\net5.0\Kirjasto-olio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Kirjasto-olio\Kirjasto-olio\obj\Debug\net5.0\Kirjasto-olio.AssemblyInfoInputs.cache
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Kirjasto-olio\Kirjasto-olio\obj\Debug\net5.0\Kirjasto-olio.AssemblyInfo.cs
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Kirjasto-olio\Kirjasto-olio\obj\Debug\net5.0\Kirjasto-olio.csproj.CoreCompileInputs.cache
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Kirjasto-olio\Kirjasto-olio\obj\Debug\net5.0\Kirjasto-olio.dll
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Kirjasto-olio\Kirjasto-olio\obj\Debug\net5.0\ref\Kirjasto-olio.dll
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Kirjasto-olio\Kirjasto-olio\obj\Debug\net5.0\Kirjasto-olio.pdb
+C:\Users\Joel\source\repos\T1-Ohjelmointi\Kirjasto-olio\Kirjasto-olio\obj\Debug\net5.0\Kirjasto-olio.genruntimeconfig.cache
